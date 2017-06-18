@@ -17,28 +17,28 @@ public class Agency {
     private String name;
     @SerializedName("price")
     @Expose
-    private Object price;
+    private String price;
     @SerializedName("phone")
     @Expose
-    private Object phone;
+    private String phone;
     @SerializedName("address")
     @Expose
-    private Object address;
+    private String address;
     @SerializedName("schrdule")
     @Expose
-    private Object schrdule;
+    private String schrdule;
     @SerializedName("latitude")
     @Expose
-    private Object latitude;
+    private String latitude;
     @SerializedName("longitude")
     @Expose
-    private Object longitude;
+    private String longitude;
     @SerializedName("requisites")
     @Expose
-    private Object requisites;
+    private String requisites;
     @SerializedName("credit_card")
     @Expose
-    private Object creditCard;
+    private String creditCard;
 
     public Integer getId() {
         return id;
@@ -56,67 +56,67 @@ public class Agency {
         this.name = name;
     }
 
-    public Object getPrice() {
+    public String getPrice() {
         return price;
     }
 
-    public void setPrice(Object price) {
+    public void setPrice(String price) {
         this.price = price;
     }
 
-    public Object getPhone() {
+    public String getPhone() {
         return phone;
     }
 
-    public void setPhone(Object phone) {
+    public void setPhone(String phone) {
         this.phone = phone;
     }
 
-    public Object getAddress() {
+    public String getAddress() {
         return address;
     }
 
-    public void setAddress(Object address) {
+    public void setAddress(String address) {
         this.address = address;
     }
 
-    public Object getSchrdule() {
+    public String getSchrdule() {
         return schrdule;
     }
 
-    public void setSchrdule(Object schrdule) {
+    public void setSchrdule(String schrdule) {
         this.schrdule = schrdule;
     }
 
-    public Object getLatitude() {
+    public String getLatitude() {
         return latitude;
     }
 
-    public void setLatitude(Object latitude) {
+    public void setLatitude(String latitude) {
         this.latitude = latitude;
     }
 
-    public Object getLongitude() {
+    public String getLongitude() {
         return longitude;
     }
 
-    public void setLongitude(Object longitude) {
+    public void setLongitude(String longitude) {
         this.longitude = longitude;
     }
 
-    public Object getRequisites() {
+    public String getRequisites() {
         return requisites;
     }
 
-    public void setRequisites(Object requisites) {
+    public void setRequisites(String requisites) {
         this.requisites = requisites;
     }
 
-    public Object getCreditCard() {
+    public String getCreditCard() {
         return creditCard;
     }
 
-    public void setCreditCard(Object creditCard) {
+    public void setCreditCard(String creditCard) {
         this.creditCard = creditCard;
     }
 
