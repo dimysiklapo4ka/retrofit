@@ -1,6 +1,7 @@
 package com.example.d1mys1klapo4ka.retrofitandgson.activity;
 
 import android.app.ProgressDialog;
+import android.content.Intent;
 import android.support.design.widget.FloatingActionButton;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
@@ -8,6 +9,7 @@ import android.support.v7.widget.Toolbar;
 import android.util.Log;
 import android.view.View;
 import android.widget.AdapterView;
+import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
@@ -104,6 +106,14 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
+        Button buttonSecondActivity = (Button)findViewById(R.id.bt_second_activity);
 
+        buttonSecondActivity.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+                startActivity(intent);
+            }
+        });
     }
 }

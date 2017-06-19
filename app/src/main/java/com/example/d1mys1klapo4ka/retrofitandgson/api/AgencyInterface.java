@@ -7,7 +7,9 @@ import java.util.List;
 
 import okhttp3.Response;
 import retrofit2.Call;
+import retrofit2.http.Field;
 import retrofit2.http.GET;
+import retrofit2.http.POST;
 import retrofit2.http.Path;
 
 
@@ -19,6 +21,11 @@ public interface AgencyInterface {
 
     @GET("/api/v1/agencies")
     Call<AgencyList> getAllData();
+
+    @POST("/api/v1/agencies")
+    Response addAgency(@Field("name") String name, @Field("price") String price, @Field("phone") String phone,
+                       @Field("address") String address, @Field("schrdule") String schrdule,
+                       @Field("requisites") String requisites, @Field("credit_card") String creditCard);
 
 //    @GET("/api/v1/agencies")
 //    Call<Agency> getName(@Path("name") String name);

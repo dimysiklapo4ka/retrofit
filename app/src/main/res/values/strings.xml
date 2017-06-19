@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Retrofit and Gson</string>
+    <string name="hint_name_agency">Введите название вашего агенства</string>
+    <string name="hint_price_agency">Введите стоимость предоставляемых услуг</string>
+    <string name="hint_phone_agency">Введите телефон агенства</string>
+    <string name="hint_address_agency">Введите адресс агенства</string>
+    <string name="hint_schrdule">xz 4To ETo</string>
+    <string name="hint_credit_card">Введите кредитную карту</string>
 </resources>
