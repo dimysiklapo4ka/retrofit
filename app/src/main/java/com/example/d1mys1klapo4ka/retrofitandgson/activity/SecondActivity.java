@@ -11,15 +11,9 @@ import android.widget.EditText;
 import com.example.d1mys1klapo4ka.retrofitandgson.R;
 import com.example.d1mys1klapo4ka.retrofitandgson.api.AgencyInterface;
 import com.example.d1mys1klapo4ka.retrofitandgson.api.RetrofitClient;
-import com.example.d1mys1klapo4ka.retrofitandgson.retrofitModel.AgencyList;
 
-import okhttp3.Response;
 import retrofit2.Call;
 import retrofit2.Callback;
-
-/**
- * Created by dev on 19.06.17.
- */
 
 public class SecondActivity extends AppCompatActivity implements View.OnClickListener{
 

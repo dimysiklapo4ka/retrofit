@@ -13,6 +13,9 @@ import android.widget.Button;
 import android.widget.ListView;
 import android.widget.Toast;
 
+import com.example.d1mys1klapo4ka.retrofitandgson.api.UserInterface;
+import com.example.d1mys1klapo4ka.retrofitandgson.api.VacanciesInterface;
+import com.example.d1mys1klapo4ka.retrofitandgson.retrofitModel.UserModel;
 import com.example.d1mys1klapo4ka.retrofitandgson.utils.InternetConection;
 import com.example.d1mys1klapo4ka.retrofitandgson.adapter.AgencyAdapter;
 import com.example.d1mys1klapo4ka.retrofitandgson.api.AgencyInterface;
@@ -27,7 +30,6 @@ import java.util.List;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
-
 
 public class MainActivity extends AppCompatActivity {
 
@@ -111,9 +113,41 @@ public class MainActivity extends AppCompatActivity {
         buttonSecondActivity.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
-                startActivity(intent);
+
+                final VacanciesInterface api = RetrofitClient.getVacancyInterface();
+
+                switch (v.getId()){
+                    case R.id.bt_second_activity:
+
+                        Thread thread = new Thread(new Runnable() {
+                            @Override
+                            public void run() {
+
+                                //Call call = api.addVacancy("jhgcdjvjd",1,4500.00,"ghiu","utguyhfg","yugfuyh","fniytfniy");
+                                Call call = api.addVacancy("Сантехник", 1, 4500.00, "что то там", "Ukr", "xd", "xs");
+
+                                call.enqueue(new Callback<Void>() {
+                                    @Override
+                                    public void onResponse(Call<Void> call, retrofit2.Response<Void> response) {
+                                        Log.e("@@@@@@", "Upload : success" + call + "      " + response);
+                                    }
+
+                                    @Override
+                                    public void onFailure(Call call, Throwable t) {
+                                        Log.e("@@@@@@", "Upload : error");
+                                    }
+                                });
+
+                            }
+                        });
+                        thread.start();
+                        break;
+//                Intent intent = new Intent(MainActivity.this, SecondActivity.class);
+//                startActivity(intent);
             }
+        }
         });
     }
 }
+
+

@@ -3,10 +3,6 @@ package com.example.d1mys1klapo4ka.retrofitandgson.api;
 import retrofit2.Retrofit;
 import retrofit2.converter.gson.GsonConverterFactory;
 
-/**
- * Created by d1mys1klapo4ka on 18.06.2017.
- */
-
 public class RetrofitClient {
 
     private static String BASE_URL = "http://server.gojob.com.ua";
@@ -23,5 +19,11 @@ public class RetrofitClient {
         return getRetrofitInstance().create(AgencyInterface.class);
     }
 
+    public static UserInterface getUserInterface(){
+        return getRetrofitInstance().create(UserInterface.class);
+    }
 
+    public static VacanciesInterface getVacancyInterface(){
+        return  getRetrofitInstance().create(VacanciesInterface.class);
+    }
 }

@@ -15,10 +15,6 @@ import com.example.d1mys1klapo4ka.retrofitandgson.retrofitModel.Agency;
 
 import java.util.List;
 
-/**
- * Created by d1mys1klapo4ka on 19.06.2017.
- */
-
 public class AgencyAdapter extends ArrayAdapter<Agency>{
 
     List<Agency> agencies;
